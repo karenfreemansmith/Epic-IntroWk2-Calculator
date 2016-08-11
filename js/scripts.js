@@ -17,24 +17,24 @@ var divide = function(number1, number2) {
 
 //UI logic
 $(document).ready(function() {
-  $("form#add").submit(function(event) {
-    event.preventDefault();
-    var result = add(parseInt($("#add1").val()), parseInt($("#add2").val()));
+  $("#add").click(function(event) {
+    var result = add(parseInt($("#input1").val()), parseInt($("#input2").val()));
     $("#output").text(result);
+    event.preventDefault();
   });
-  $("form#sub").submit(function(event) {
-    event.preventDefault();
-    var result = subtract(parseInt($("#sub1").val()), parseInt($("#sub2").val()));
+  $("#subtract").click(function(event) {
+    var result = subtract(parseInt($("#input1").val()), parseInt($("#input2").val()));
     $("#output").text(result);
+    event.preventDefault();
   });
-  $("form#mul").submit(function(event) {
-    event.preventDefault();
-    var result = multiply(parseInt($("#mul1").val()), parseInt($("#mul2").val()));
+  $("#multiply").click(function(event) {
+    var result = multiply(parseInt($("#input1").val()), parseInt($("#input2").val()));
     $("#output").text(result);
+    event.preventDefault();
   });
-  $("form#div").submit(function(event) {
-    event.preventDefault();
-    var result = divide(parseInt($("#div1").val()), parseInt($("#div2").val()));
+  $("#divide").click(function(event) {
+    var result = divide(parseInt($("#input1").val()), parseInt($("#input2").val()));
     $("#output").text(result);
+    event.preventDefault();
   });
 });
